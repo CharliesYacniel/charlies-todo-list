@@ -38,5 +38,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+ 
+  "devDependencies": {
+    "babel-jest": "^27.5.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "history": "^5.3.0",
+    "jest": "^27.5.1",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-watch-typeahead": "^0.6.5",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/serviceWorker.js"
+    ]
   }
 }
