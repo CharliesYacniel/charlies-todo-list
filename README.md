@@ -1,3 +1,53 @@
+# Welcome to Charlies TODOS LIST!
+
+Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+# Demo
+
+https://charliesyacniel.github.io/charlies-todo-list/
+
+
+![enter image description here](https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg)
+# Run
+
+The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
+
+
+# Files
+
+* public
+* src
+    + __ test __
+        - components
+          * Todos.test.js
+          * TodoItem.test.js
+          * DisplayTodos.test.js     
+         - redux
+            * reducer.test.js
+            * store.test.js
+     + components
+	        * Todos.js
+	        * TodoItem.js
+	        * DisplayTodos.js
+     + css
+        *  App.css
+       * index.css
+       * main.css
+      + redux
+         - reducer.js
+         - store.js  
+      + App.js
+       + index.js
+       + setupTests.js
+* .gitIgnore
+* package-lock.json
+ * package.json
+* README.md
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
