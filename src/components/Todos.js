@@ -22,7 +22,7 @@ const Todos = (props) => {
   
     const add = () => {
     if (todo === "") {
-      alert("Input is Empty");
+      alert("Ingresa un todo");
     } else {
       props.addTodo({
         id: Math.floor(Math.random() * 1000),
@@ -46,19 +46,9 @@ const Todos = (props) => {
         className="todo-input"
         value={todo}
       />
-
-      <button className="add-btn"  onClick={() => add()}>
+      <button className="add-btn" onClick={() => add()}>
         +
       </button>
-      <br />
-      
-      {/* <ul>
-        {props.todos.length > 0 &&
-          props.todos.map((item) => {
-            return <li key={item.id}>{item.item}</li>;
-          })}
-      </ul> */}
-        
     </div>
   );
 };

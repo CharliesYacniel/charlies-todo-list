@@ -49,4 +49,5 @@ export const {
   updateTodos,
   completeTodos,
 } = addTodoReducer.actions;
+export default initialState
 export const reducer = addTodoReducer.reducer;

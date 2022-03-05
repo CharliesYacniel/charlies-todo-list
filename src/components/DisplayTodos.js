@@ -28,24 +28,25 @@ const DisplayTodos = (props) => {
   const [sort, setSort] = useState("active");
   return (
     <div className="displaytodos">
+      <h1 className="label">Filtra tus Todos</h1>
       <div className="buttons">
     
         <button
           onClick={() => setSort("active")}
         >
-          Active
+          Pendientes
         </button>
 
         <button
           onClick={() => setSort("completed")}
         >
-          Completed
+          Completados
         </button>
 
         <button
           onClick={() => setSort("all")}
         >
-          All
+          Todos
         </button>
 
       </div>

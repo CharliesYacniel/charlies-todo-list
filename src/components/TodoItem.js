@@ -24,19 +24,23 @@ const TodoItem = (props) => {
     <li
       key={item.id}
       className="card"
-    >
+      >
       <textarea
+        data-testid="areaTexto"
         ref={inputRef}
         disabled={inputRef}
         defaultValue={item.item}
         onKeyPress={(e) => update(item.id, inputRef.current.value, e)}
       />
       <div className="btns">
-        <button  onClick={() => changeFocus()}>
+        <button
+        className="buttonTODO"
+          onClick={() => changeFocus()}>
           <AiFillEdit />
         </button>
         {item.completed === false && (
           <button
+          className="buttonTODO"
             style={{ color: "green" }}
             onClick={() => completeTodo(item.id)}
           >
@@ -44,9 +48,9 @@ const TodoItem = (props) => {
           </button>
         )}
         <button
+          className="buttonTODO"
           style={{ color: "red" }}
           onClick={() => removeTodo(item.id)} >
-    
           <IoClose />
         </button>
 

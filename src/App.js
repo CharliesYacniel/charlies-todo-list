@@ -15,11 +15,13 @@ function App() {
       >
         Mi App de TODOs
       </motion.h1>
+      
       <motion.div
         initial={{ y: 1000 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", duration: 1 }}
       >
+
         <Todos />
         <DisplayTodos />
       </motion.div>
