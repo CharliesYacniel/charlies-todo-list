@@ -1,7 +1,38 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { addTodos } from "../redux/reducer";
+
+const mapStateToProps = (state) => {
+  return {
+    todos: state,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addTodo: (obj) => dispatch(addTodos(obj)),
+  };
+};
 
 const Todos = (props) => {
+  
+  console.log("props",props);
+  
   const [todo, setTodo] = useState("");
+  
+    const add = () => {
+    if (todo === "") {
+      alert("Ingresa un todo");
+    } else {
+      props.addTodo({
+        id: Math.floor(Math.random() * 1000),
+        item: todo,
+        completed: false,
+      });
+      setTodo("");
+    }
+  };
+  
 
   const handleChange = (e) => {
     setTodo(e.target.value);
@@ -15,12 +46,12 @@ const Todos = (props) => {
         className="todo-input"
         value={todo}
       />
-
-      <button className="add-btn">
-        Add
+      <button className="add-btn" onClick={() => add()}>
+        +
       </button>
-      <br />
     </div>
   );
 };
-export default Todos;
+
+//we can use connect method to connect this component with redux store
+export default connect(mapStateToProps, mapDispatchToProps)(Todos);
